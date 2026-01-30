@@ -8,20 +8,22 @@ SUI Move smart contracts for the Lucky Day Play-to-Earn gaming platform.
 
 Standard SUI fungible token (Coin) for the Lucky Day ecosystem.
 
-| Property | Value |
-|----------|-------|
-| **Symbol** | LUCK |
-| **Name** | Lucky Token |
-| **Decimals** | 9 |
+| Property       | Value                            |
+| -------------- | -------------------------------- |
+| **Symbol**     | LUCK                             |
+| **Name**       | Lucky Token                      |
+| **Decimals**   | 9                                |
 | **Max Supply** | 1,000,000,000 (minted on demand) |
 
 **Features:**
+
 - `mint()` - Mint tokens to a recipient (TreasuryCap holder only)
 - `burn()` - Burn tokens from a coin object
 - `mint_batch()` - Batch mint to multiple recipients (airdrops, leaderboard payouts)
 - `total_supply()` - Get current total supply
 
 **Token Distribution Plan:**
+
 - Airdrop: 5% (50M LUCK)
 - Liquidity Pool: 30% (300M LUCK)
 - Play-to-Earn Rewards: 20% (200M LUCK)
@@ -34,6 +36,7 @@ Standard SUI fungible token (Coin) for the Lucky Day ecosystem.
 Shared object holding SUI for prize distribution to game winners.
 
 **Features:**
+
 - `create_pool()` - Create the shared reward pool
 - `deposit()` - Admin deposits SUI into the pool
 - `distribute_reward()` - Send SUI reward to a single winner
@@ -42,6 +45,7 @@ Shared object holding SUI for prize distribution to game winners.
 - `withdraw()` - Emergency withdrawal
 
 **Events:**
+
 - `PoolCreated` - Pool initialization
 - `Deposited` - SUI deposited to pool
 - `RewardDistributed` - Single reward sent
@@ -66,6 +70,7 @@ sui move test
 ```
 
 All 16 tests should pass:
+
 - 5 tests for `luck_token`
 - 11 tests for `reward_pool`
 
@@ -83,6 +88,7 @@ sui client publish --gas-budget 100000000
 ```
 
 After deployment, save these object IDs:
+
 - **Package ID**: The published package address
 - **TreasuryCap ID**: For minting LUCK tokens
 - **CoinMetadata ID**: Token metadata (frozen)
@@ -162,7 +168,8 @@ MIT
 
 ## Links
 
-- [Lucky Day App](https://lucky-day.app)
+- [Lucky Day App](https://yourluckyday.app)
 - [SUI Documentation](https://docs.sui.io)
 - [Move Language](https://move-language.github.io/move/)
+
 # sui-luck-token
